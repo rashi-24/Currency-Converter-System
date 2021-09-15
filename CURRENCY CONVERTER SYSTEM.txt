@@ -1,0 +1,453 @@
+#include<stdio.h>
+#include<windows.h>
+#include<conio.h>
+void SetColor(int ForgC)
+{
+     WORD wColor;
+     
+
+     HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+     CONSOLE_SCREEN_BUFFER_INFO csbi;
+     
+     if(GetConsoleScreenBufferInfo(hStdOut, &csbi))
+     {
+          
+          wColor = (csbi.wAttributes & 0xF0) + (ForgC & 0x0F);
+          SetConsoleTextAttribute(hStdOut, wColor);
+     }
+     return;
+}
+void rutodo ()
+{
+  float rupee, amt1;
+  SetColor(2);
+  printf ("ENTER THE AMOUNT IN RUPEE");
+  printf ("\n");
+  scanf ("%f", &rupee);
+  amt1 = rupee / 75.9;
+  printf ("%f Rs = %f $", rupee, amt1);
+  printf ("\n");
+}
+
+void rutoeur ()
+{
+  float rupee, amt2;
+  SetColor(4);
+  printf ("ENTER THE AMOUNT IN RUPEE");
+  printf ("\n");
+  scanf ("%f", &rupee);
+  amt2 = rupee * 0.012;
+  printf ("%f Rs = %f Euro,", rupee, amt2);
+  printf ("\n");
+
+
+}
+
+void rutoyen ()
+{
+  float rupee, amt3;
+  SetColor(5);
+  printf ("ENTER THE AMOUNT IN RUPEE");
+  printf ("\n");
+  scanf ("%f", &rupee);
+  amt3 = rupee * 1.41;
+  printf ("%f Rs = %f Yen", rupee, amt3);
+  printf ("\n");
+
+}
+
+void
+rutopound ()
+{
+  float rupee, amt4;
+  SetColor(9);
+  printf ("ENTER THE AMOUNT IN RUPEE");
+  printf ("\n");
+  scanf ("%f", &rupee);
+  amt4 = rupee * 0.011;
+  printf ("%f Rs = %f Pounds", rupee, amt4);
+  printf ("\n");
+}
+
+void
+dotoru ()
+{
+  float dollar, amt5;
+  SetColor(9);
+  printf ("ENTER THE AMOUNT IN DOLLAR");
+  printf ("\n");
+  scanf ("%f", &dollar);
+  amt5 = dollar * 75.9;
+  printf ("%f $ = %f Rs", dollar, amt5);
+  printf ("\n");
+
+}
+
+void
+dotoeuro ()
+{
+  float dollar, amt6;
+  SetColor(12);
+  printf ("ENTER THE AMOUNT IN DOLLAR");
+  printf ("\n");
+  scanf ("%f", &dollar);
+  amt6 = dollar * 0.92;
+  printf ("%f $ = %f Euro", dollar, amt6);
+  printf ("\n");
+}
+
+void
+dotoyen ()
+{
+  float dollar, amt7;
+  SetColor(10);
+  printf ("ENTER THE AMOUNT IN DOLLAR");
+  printf ("\n");
+  scanf ("%f", &dollar);
+  amt7 = dollar * 75.9;
+  printf ("%f $ = %f Yen", dollar, amt7);
+  printf ("\n");
+}
+
+void
+dotopound ()
+{
+  float dollar, amt8;
+  SetColor(1);
+  printf ("ENTER THE AMOUNT IN DOLLAR");
+  printf ("\n");
+  scanf ("%f", &dollar);
+  amt8 = dollar * 0.82;
+  printf ("%f $ = %f Pounds ", dollar, amt8);
+  printf ("\n");
+}
+
+void
+eurotoru ()
+{
+  float euro, amt9;
+  SetColor(13);
+  printf ("ENTER THE AMOUNT IN EURO");
+  printf ("\n");
+  scanf ("%f", &euro);
+  amt9 = euro * 82.09;
+  printf ("%f Euro, = %f Rs ", euro, amt9);
+  printf ("\n");
+}
+
+void
+eurotodo ()
+{
+  float euro, amt10;
+  SetColor(9);
+  printf ("ENTER THE AMOUNT IN EURO");
+  printf ("\n");
+  scanf ("%f", &euro);
+  amt10 = euro * 1.08;
+  printf ("%f Euro, = %f $ ", euro, amt10);
+  printf ("\n");
+}
+
+void
+eurotoyen ()
+{
+  float euro, amt11;
+  SetColor(2);
+  printf ("ENTER THE AMOUNT IN EURO");
+  printf ("\n");
+  scanf ("%f", &euro);
+  amt11 = euro * 115.85;
+  printf ("%f Euro, = %f Yen ", euro, amt11);
+  printf ("\n");
+}
+
+void
+europound ()
+{
+  float euro, amt12;
+  SetColor(11);
+  printf ("ENTER THE AMOUNT IN EURO");
+  printf ("\n");
+  scanf ("%f", &euro);
+  amt12 = euro * 0.89;
+  printf ("%f Euro, = %f Pound ", euro, amt12);
+  printf ("\n");
+}
+
+void
+yentoru ()
+{
+  float yen, amt13;
+  SetColor(4);
+  printf ("ENTER THE AMOUNT IN YEN");
+  printf ("\n");
+  scanf ("%f", &yen);
+  amt13 = yen * 0.71;
+  printf ("%f Yen = %f Rs ", yen, amt13);
+  printf ("\n");
+
+}
+
+void
+yentodo ()
+{
+  float yen, amt14;
+  SetColor(5);
+  printf ("ENTER THE AMOUNT IN YEN");
+  printf ("\n");
+  scanf ("%f", &yen);
+  amt14 = yen * 0.0093;
+  printf ("%f Yen = %f $ ", yen, amt14);
+  printf ("\n");
+}
+
+void
+yentoeuro ()
+{
+  float yen, amt15;
+  SetColor(10);
+  printf ("ENTER THE AMOUNT IN YEN");
+  printf ("\n");
+  scanf ("%f", &yen);
+  amt15 = yen * 0.0086;
+  printf ("%f Yen = %f Euro ", yen, amt15);
+  printf ("\n");
+}
+
+void
+yentopound ()
+{
+  float yen, amt16;
+  SetColor(9);
+  printf ("ENTER THE AMOUNT IN YEN");
+  printf ("\n");
+  scanf ("%f", &yen);
+  amt16 = yen * 0.0077;
+  printf ("%f Yen = %f Pound ", yen, amt16);
+  printf ("\n");
+}
+
+void
+poundtoru ()
+{
+  float pound, amt17;
+  SetColor(6);
+  printf ("ENTER THE AMOUNT IN POUND");
+  printf ("\n");
+  scanf ("%f", &pound);
+  amt17 = pound * 91.85;
+  printf ("%f Pound = %f Rs ", pound, amt17);
+  printf ("\n");
+
+}
+
+void
+poundtodo ()
+{
+  float pound, amt18;
+  SetColor(8);
+  printf ("ENTER THE AMOUNT IN POUND");
+  printf ("\n");
+  scanf ("%f", &pound);
+  amt18 = pound * 1.21;
+  printf ("%f Pound = %f $ ", pound, amt18);
+  printf ("\n");
+}
+
+void
+poundtoeuro ()
+{
+  float pound, amt18;
+  SetColor(1);
+  printf ("ENTER THE AMOUNT IN POUND");
+  printf ("\n");
+  scanf ("%f", &pound);
+  amt18 = pound * 1.12;
+  printf ("%f Pound = %f Euro", pound, amt18);
+  printf ("\n");
+}
+
+void
+poundtoyen ()
+{
+  float pound, amt19;
+  SetColor(5);
+  printf ("ENTER THE AMOUNT IN POUND");
+  printf ("\n");
+  scanf ("%f", &pound);
+  amt19 = pound * 129.59;
+  printf ("%f Pound = %f Yen ", pound, amt19);
+  printf ("\n");
+}
+
+int
+main ()
+{
+  int x, y, z;
+  float amt;
+  SetColor(9);
+  printf ("WELCOME TO CURRENCY CONVERTER");
+  printf ("\n");
+  printf
+    ("*********************************************************************************");
+  printf ("\n");
+  printf ("\n");
+  SetColor(15);
+  printf ("LIST OF CURRENCY YOU WANT TO CONVERT FROM");
+  printf ("\n");
+  printf ("1. RUPEE");
+  printf ("\n");
+  printf ("2. DOLLAR");
+  printf ("\n");
+  printf ("3. EURO");
+  printf ("\n");
+  printf ("4. YEN");
+  printf ("\n");
+  printf ("5. POUND");
+  printf ("\n");
+  printf ("\n");
+  printf ("LIST OF CURRENCY YOU WANT TO CONVERT TO");
+  printf ("\n");
+  printf ("1.RUPEE");
+  printf ("\n");
+  printf ("2. DOLLAR");
+  printf ("\n");
+  printf ("3. EURO");
+  printf ("\n");
+  printf ("4. YEN");
+  printf ("\n");
+  printf ("5. POUND");
+  printf ("\n");
+  printf ("\n");
+  do
+    {
+      do
+      {
+      	SetColor(15);
+	    printf ("SELECT THE CURRENCY YOU WANT TO CONVERT FROM");
+        printf ("\n");
+        scanf ("%d", &x);
+        if(x>5)
+        {
+        	SetColor(4);
+        	printf("WRONG OPTION! PLEASE SELECT THE CORRECT OPTION. \n\n");
+        
+        	
+        }
+		}while(x>5);
+
+      do
+      {
+      	SetColor(15);
+        printf ("SELECT THE CURRENCY YOU WANT TO CONVERT TO");
+        printf ("\n");
+        scanf ("%d", &y);
+        if(y>5)
+        {
+        SetColor(4);
+        printf("WRONG OPTION! PLEASE SELECT THE CORRECT OPTION. \n\n");
+        }
+		}while(y>5)	;
+      
+      if (x == 1 && y == 2)
+	{
+	  rutodo ();
+	}
+      if (x == 1 && y == 3)
+	{
+	  rutoeur ();
+	}
+      if (x == 1 && y == 4)
+	{
+	  rutoyen ();
+	}
+      if (x == 1 && y == 5)
+	{
+	  rutopound ();
+	}
+      if (x == 2 && y == 1)
+	{
+	  dotoru ();
+	}
+      if (x == 2 && y == 3)
+	{
+	  dotoeuro ();
+	}
+      if (x == 2 && y == 4)
+	{
+	  dotoyen ();
+	}
+      if (x == 2 && y == 5)
+	{
+	  dotopound ();
+	}
+      if (x == 3 && y == 1)
+	{
+	  eurotoru ();
+	}
+      if (x == 3 && y == 2)
+	{
+	  eurotodo ();
+	}
+      if (x == 3 && y == 4)
+	{
+	  eurotoyen ();
+	}
+      if (x == 3 && y == 5)
+	{
+	  europound ();
+	}
+      if (x == 4 && y == 1)
+	{
+	  yentoru ();
+	}
+      if (x == 4 && y == 2)
+	{
+	  yentodo ();
+	}
+      if (x == 4 && y == 3)
+	{
+	  yentoeuro ();
+	}
+      if (x == 4 && y == 5)
+	{
+	  yentopound ();
+	}
+	 if(x==5 && y==1)
+	 {
+	 	poundtoru();
+	 }
+	 if(x==5 && y==2)
+	 {
+	 	poundtodo();
+	 }
+	 if(x==5 && y==3)
+	 {
+	 	poundtoeuro();
+	 }
+	 if(x==5 && y==4)
+	 {
+	 	poundtoyen();
+	 }
+	 if(x==y)
+	 {
+	 	printf("WRONG INPUT! PLEASE CHECK YOUR CHOICE");
+	 	printf("\n");
+	 }
+	
+	  SetColor(15);
+      printf ("DO YOU WANT TO CONTINUE?");
+      printf ("\n");
+      printf ("PRESS 1 FOR YES AND 2 FOR NO");
+      printf ("\n");
+      scanf ("%d", &z);
+    }
+  while (z == 1);
+  SetColor(9);
+  printf ("THANK YOU FOR USING CURRENCY CONVERTER");
+  printf ("\n");
+  printf ("*****************************************************************");
+  getch ();
+  return 0;
+  
+}
